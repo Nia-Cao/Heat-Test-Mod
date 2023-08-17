@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <RootNamespace>Heat_Test_Mod</RootNamespace>
+    <Nullable>enable</Nullable>
+    <BaseOutputPath>bin/</BaseOutputPath>
+    <SignAssembly>False</SignAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Eyes">
+      <HintPath>G:\Heat\Heat_Data\Managed\Eyes.dll</HintPath>
+    </Reference>
+    <Reference Include="HeatSDK.Core">
+      <HintPath>G:\Heat\Heat_Data\Managed\HeatSDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="HeatSDK.Globals">
+      <HintPath>G:\Heat\Heat_Data\Managed\HeatSDK.Globals.dll</HintPath>
+    </Reference>
+    <Reference Include="HeatSDK.Misc">
+      <HintPath>G:\Heat\Heat_Data\Managed\HeatSDK.Misc.dll</HintPath>
+    </Reference>
+    <Reference Include="MelonLoader">
+      <HintPath>G:\Heat\MelonLoader\MelonLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>G:\Heat\Heat_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>G:\Heat\Heat_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>G:\Heat\Heat_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>G:\Heat\Heat_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>G:\Heat\Heat_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>G:\Heat\Heat_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsNativeModule">
+      <HintPath>G:\Heat\Heat_Data\Managed\UnityEngine.UIElementsNativeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>G:\Heat\Heat_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>G:\Heat\Heat_Data\Managed\UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy /y &quot;$(TargetDir)Heat Test Mod.dll&quot; &quot;G:\Heat\Mods&quot;&#xD;&#xA;" />
+  </Target>
+
+</Project>
